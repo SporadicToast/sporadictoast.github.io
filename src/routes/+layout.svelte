@@ -11,7 +11,6 @@
 		return page.url.pathname.substring(1)
 	}
 </script>
-{page.url.pathname}
 
 <div class="h-screen w-screen">
 	<div class="flex items-center justify-center my-10">
