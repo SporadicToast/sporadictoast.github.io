@@ -1,0 +1,2 @@
+<h1 class="text-4xl font-bold mb-4" >Hi! I am Marc Gabriel C. Macaraeg</h1>
+<p class="text-lg">I am a Computer Science Graduate | Passionate about problem-solving, embedded systems, project management and web development!</p>
