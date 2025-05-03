@@ -12,7 +12,7 @@
 	}
 </script>
 
-<div class="h-screen w-screen">
+<div class="h-screen w-screen flex-wrap overflow-hidden">
 	<div class="flex items-center justify-center my-10">
 		<!--Large Case-->
 		<div class="hidden md:flex sm:hidden">
@@ -32,8 +32,10 @@
 					<NavTiles />
 				{/snippet}
 			</Navigation.Rail>
-			<div class="m-5">
-				{@render children()}
+			<div class="w-[80vw] flex justify-center">
+				<div class="w-[40vw]">
+					{@render children()}
+				</div>
 			</div>
 		</div>
 
@@ -46,19 +48,23 @@
 			{/snippet}
 			</Navigation.Rail>
 			<!-- Content -->
-			<div class="m-5">
-				{@render children()}
+			<div class="w-full flex justify-center">
+				<div class="w-[80vw]">
+					{@render children()}
+				</div>
 			</div>
 		</div>
 
 		<!--Small screen case-->
 		<div class="sm:flex md:hidden xl:hidden flex-col w-screen">
-			<div class="m-5 flex-1">
+			<div class="m-5 flex-1 overflow-y-auto">
 				{@render children()}
 			</div>
-			<Navigation.Bar {value} onValueChange={(newValue) => (value = newValue)}>
-				<NavTiles />
-			</Navigation.Bar>
+			<div class="absolute bottom-0 w-full">
+				<Navigation.Bar {value} onValueChange={(newValue) => (value = newValue)}>
+					<NavTiles />
+				</Navigation.Bar>
+			</div>
 		</div>
 	</div>
 </div>
